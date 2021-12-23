@@ -4,6 +4,7 @@ import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/Accordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 
 // function declaration
 
@@ -12,20 +13,17 @@ function App(props: any) {
     // обязана вернуть JSX
     console.log("App rendering")
     return (
-        <div>
-            <OnOff />
-            <OnOff />
-            <OnOff />
+        <div className={"App"}>
             <OnOff />
 
             <UncontrolledAccordion titleValue={"Menu"} />
-            <UncontrolledAccordion titleValue={"Users"} />
+
+            <UncontrolledRating />
+
             {/*<OnOff on={true} />
             <OnOff on={false} />*/}
-            
-            {/*
 
-            <Rating value={1}/>
+            {/*<Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
             <Rating value={4}/>
