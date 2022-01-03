@@ -22,10 +22,10 @@ function App(props: any) {
 
             <UncontrolledAccordion titleValue={"Menu"} />*/}
 
-            {/*<UncontrolledRating />*/}
+            <UncontrolledRating />
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            {/*<Accordion titleValue={"Menu"} collapsed={false} />*!/*/}
+            <Accordion titleValue={"Menu"} collapsed={false} />
 
             {/*<OnOff on={true} />
             <OnOff on={false} />*/}
