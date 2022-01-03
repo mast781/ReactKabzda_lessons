@@ -20,7 +20,9 @@ function App(props: any) {
 
 
             <UncontrolledRating />
-            {/*<Rating value={3}/>*/}
+
+            <Rating value={3}/>
+            <Accordion titleValue={"Menu"} collapsed={false} />
 
             {/*<OnOff on={true} />
             <OnOff on={false} />*/}
