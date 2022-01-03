@@ -18,7 +18,9 @@ function App(props: any) {
 
             <UncontrolledAccordion titleValue={"Menu"} />
 
+
             <UncontrolledRating />
+            {/*<Rating value={3}/>*/}
 
             {/*<OnOff on={true} />
             <OnOff on={false} />*/}
