@@ -5,6 +5,7 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import OnOff from "./components/OnOff/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
 import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 // function declaration
 
@@ -15,26 +16,26 @@ function App(props: any) {
     console.log("App rendering")
 
     let [ratingValue, setRatingValue] =  useState<RatingValueType>(4)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
+    let [switchOn, setSwitchOn] = useState<boolean>(false)
+
 
     return (
         <div className={"App"}>
-           {/* <OnOff />
-
-            <UncontrolledAccordion titleValue={"Menu"} />*/}
+           {/* <OnOff />*/}
 
             <UncontrolledRating />
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
-            <Accordion titleValue={"Menu"} collapsed={false} />
+            <Accordion titleValue={"Menu"}
+                       collapsed={accordionCollapsed}
+                       onChange = {() => {setAccordionCollapsed(!accordionCollapsed)}} />
 
-            {/*<OnOff on={true} />
-            <OnOff on={false} />*/}
+            {/*{<OnOff on={switchOn} onChange={setSwitchOn}/>}*/}
+            <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
+            <UncontrolledAccordion titleValue={"Blabla"} />
 
-            {/*<Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>*/}
+
         </div>
     );
 }
